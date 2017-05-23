@@ -1,0 +1,13 @@
+<div class="rec-item" (tap)="onTapHandler($event)" >
+    <figure>
+        <img class="rec-item__pic" src="{{article.picUrl}}" />
+    </figure>
+    <div class="rec-item__intro" >
+        <h3>{{article.title}}</h3>
+        <p *ngIf="!showDetail" >{{article.prompt}}</p>
+        <p *ngIf="showDetail" class="rec-item__author">
+            <span>作者：{{article.author}}</span>
+            <i>阅读（{{article.amount}}）</i>
+        </p>
+    </div>
+</div>

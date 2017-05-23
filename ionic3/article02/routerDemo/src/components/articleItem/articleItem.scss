@@ -1,0 +1,39 @@
+$art-item-border-color:#eeeeee;
+.rec-item{
+    display:flex;
+    justify-content:row;
+
+    border-top:1px solid $art-item-border-color;
+    padding:18px;
+    font-family: $jp-font-base;
+
+    &>figure{
+      flex:1;
+      margin:0;
+    }
+    $rec-item-pic-height:6.67rem;
+    .rec-item__pic{
+        width:10rem;
+        height:$rec-item-pic-height;
+        font-size:1rem;
+        background:url(../../assets/images/place3x2.gif);
+
+        position:relative;
+      }
+
+    .rec-item__intro{
+      flex:2;
+      margin-left:12px;
+
+      h3{
+        width:100%;
+        height:56px;
+        margin:4px 0 0 0;
+
+        font-size:1.33rem;
+      }
+      p{
+        @include reset-p;
+      }
+    }
+}

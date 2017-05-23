@@ -1,0 +1,28 @@
+.jp-subject{
+  ion-list-header.subject__header{
+    height:45px;
+    min-height:45px;
+
+    font-family: $jp-font-base;
+
+    color:$jp-color;
+
+    padding-left:14px;
+    @include margin-0;
+    ion-label{
+      @include margin-0;
+    }
+    @mixin header-text($line-height,$font-size,$margin-top){
+      display:inline-block;
+      font-size:$font-size;
+      line-height:$line-height;
+      margin-top:$margin-top;
+    }
+    i{
+
+    }
+    span{
+      @include header-text(2.57,1.17rem,8px);
+    }
+  }
+}

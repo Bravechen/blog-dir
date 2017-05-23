@@ -1,0 +1,11 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title text-center><h2 class="demo-title" no-margin >深度评测</h2></ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+      <article-item *ngFor="let eval of evalList" [article]="eval" [type]="evalId" ></article-item>
+    </ion-list>
+</ion-content>

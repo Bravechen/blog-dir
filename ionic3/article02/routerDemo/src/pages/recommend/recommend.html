@@ -1,0 +1,11 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title text-center ><h2 class="jp-title" no-margin >主题</h2></ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="jp-rec" >
+    <ion-list>
+        <article-item *ngFor="let rec of recList" [article]="rec" [type]="artType" ></article-item>
+    </ion-list>
+</ion-content>

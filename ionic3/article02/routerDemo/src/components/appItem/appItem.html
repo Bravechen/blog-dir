@@ -1,0 +1,13 @@
+<div data-type="0" class="app-item" (tap)="onTapHandler($event)" >
+    <div class="app-item__img-box">
+        <a href="javascript:;">
+            <img class="app-item__img" [src]="" />
+        </a>
+    </div>
+    <div class="app-item__text-box">
+        <h3>{{ appName }}</h3>
+        <span>软件大小:{{size}}M</span>
+        <p>{{shortdes}}</p>
+    </div>
+    <download-btn class="app-item__download" ></download-btn>
+</div>

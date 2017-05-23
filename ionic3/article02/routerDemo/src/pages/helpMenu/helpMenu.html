@@ -1,0 +1,26 @@
+<ion-menu type="reveal" side="left" swipeEnabled="true" [content]="content">
+    <ion-header>
+        <ion-toolbar>
+            <ion-title>辅助功能</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-list>
+            <ion-item>
+                <a href="javascript:;" (tap)="onTapHandler('home')" >首页</a>
+            </ion-item>
+            <ion-item>
+                <a href="javascript:;" (tap)="onTapHandler('feedback')" >反馈</a>
+            </ion-item>
+            <ion-item>
+                <a href="javascript:;" (tap)="onTapHandler('download')" >正在下载</a>
+            </ion-item>
+            <ion-item>
+                <a href="javascript:;" (tap)="onTapHandler('option')" >设置</a>
+            </ion-item>
+            <ion-item>
+                <a href="javascript:;" (tap)="onTapHandler('about')" >关于</a>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-menu>

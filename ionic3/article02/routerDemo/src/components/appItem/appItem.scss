@@ -1,0 +1,68 @@
+$app-item-bg-color:#fbfbfb;
+$app-item-font-color1:#999999;
+.app-item{
+  display:flex;
+  background:$app-item-bg-color;
+
+  font-family: $jp-font-base;
+
+  padding:8px;
+
+  border-top:1px solid $jp-border-color-1;
+
+  .app-item__img-box{
+    flex:1;
+    $pic-height:48px;
+    margin:4px;
+    &>a{
+      display:block;
+      width:$pic-height;
+      height:$pic-height;
+      background:#cccccc;
+      border-radius:10px;
+      overflow:hidden;
+
+      .app-item__img{
+        display:block;
+        width:100%;
+        height:$pic-height;
+        background:url(../../assets/images/place1x1.gif);
+      }
+    }
+  }
+  .app-item__text-box{
+    $max-line-width:196px;
+    .app-item__prompt{
+      font-size:1rem;
+      line-height: 1.5;
+      color:$app-item-font-color1;
+    }
+
+    flex:4;
+    &>h3{
+      @include margin-0;
+      width:$max-line-width;
+
+      font-size:1.3rem;
+      font-weight: bold;
+      line-height:1.5;
+      @extend .line-text;
+    }
+    &>span{
+      width:$max-line-width;
+
+      @extend .app-item__prompt;
+      @extend .line-text;
+    }
+    &>p{
+      width:$max-line-width;
+
+      @include margin-0;
+      @extend .app-item__prompt;
+      @extend .line-text;
+    }
+  }
+  .app-item__download{
+    flex:1;
+  }
+}

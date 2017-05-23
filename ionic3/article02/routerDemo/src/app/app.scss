@@ -1,0 +1,85 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Global Sass
+
+
+//=============colors===========================================
+$jp-color:#de5050;
+
+$jp-bar-color:#f2f2f2;
+
+$jp-border-color-1:#d9d9d9;
+
+$jp-bg-color:#cccccc;
+
+$jp-pic-icon-color:#999999;
+
+$jp-button-bg-color:#fdfdfd;
+$jp-button-border-color:#e4e4e4;
+$jp-button-color:#666666;
+$jp-button-color-hover:$jp-color;
+
+//=============font=============================================
+
+$jp-font-color-black:#333333;
+$jp-font-base:'Microsoft YaHei',Arial, Helvetica, sans-serif;
+$jp-title-font-size:1.8rem;
+
+//==============border========================================
+
+$jp-button-radius:5px;
+
+//=============Class============================================
+.demo-title{
+  font-family:$jp-font-base;
+  color:$jp-font-color-black;
+  font-size:$jp-title-font-size;
+}
+.jp-text-over{
+  text-overflow: inherit;
+  word-break: break-all;
+  white-space: normal;
+}
+
+.line-text{
+  overflow:hidden;
+
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  word-break:keep-all;
+}
+
+.jp-button{
+  min-height:28px;
+  font-size:1rem;
+  line-height:1.67;
+
+  padding:4px;
+
+  border-radius:$jp-button-radius;
+
+  border:1px solid $jp-button-border-color;
+  background:$jp-button-bg-color;
+  color:$jp-button-color;
+}
+.jp-button:hover{
+  border-color:$jp-button-color-hover;
+  color:#ffffff;
+  background:$jp-button-color-hover;
+}
+
+//============mixin=============================================
+@mixin margin-0{
+  margin:0;
+}
+@mixin reset-h{
+  @include margin-0;
+}
+@mixin reset-p{
+  @include margin-0;
+}
+@mixin padding-0{
+  padding:0;
+}
+

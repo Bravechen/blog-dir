@@ -1,0 +1,23 @@
+.slide-box{
+  display:block;
+  overflow:hidden;
+  background:$jp-bg-color;
+
+  .swiper-container{
+    height:auto;
+  }
+  .slide-box--minHeight{
+    min-height:12rem;
+    height:12rem;
+  }
+  .slide-box__item{
+    display:block;
+    width:100%;
+    max-height:12rem;
+    overflow:hidden;
+    font-size:0;
+  }
+}
+
+
+

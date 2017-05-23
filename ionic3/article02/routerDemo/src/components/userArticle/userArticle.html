@@ -1,0 +1,10 @@
+<div class="jp-article-item" (tap)="onTapHandler($event)" >
+    <h4 class="article-item__title" >
+        <span>{{article.title}}</span>
+    </h4>
+    <figure class="article-item__avatar">
+        <img [src]="teacher.avatar" title="{{teacher.userName}}" alt="{{teacher.userName}}" />
+    </figure>
+    <em class="article-item__name">作者：{{teacher.userName}}</em>
+    <span class="article-item__num">阅读（{{article.amount}}）</span>
+</div>

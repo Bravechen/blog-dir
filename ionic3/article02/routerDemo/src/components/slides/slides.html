@@ -1,0 +1,7 @@
+<ion-slides pager [ngClass]="{'slide-box--minHeight':!noHeight}" >
+    <ion-slide *ngFor="let slide of slides" >
+        <a class="slide-box__item" title="{{slide.title}}" >
+            <img src="{{slide.imgURL}}" />
+        </a>
+    </ion-slide>
+</ion-slides>

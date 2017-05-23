@@ -1,0 +1,36 @@
+$type-box-bg-color:#ffffff;
+$senior-bg-color:#e75f95;
+$junior-bg-color:#00c5c7;
+$primary-bg-color:#8e60e8;
+$preschool-bg-color:#f06f42;
+$all-bg-color:#c6e7f8;
+$all-bg-inner-color:#3cace6;
+$type-item-border:1px solid #f2f2f2;
+$type-btn-fontSize:16px;
+$type-btn-color:#ffffff;
+
+//===================================================
+
+.type-box{
+  display:block;
+  flex:1;
+  &>article{
+    width:100%;
+    text-align: center;
+
+    position:relative;
+    top:50%;
+    left:0;
+
+    transform-origin:top left;
+    transform:translateY(-50%);
+
+    background:$type-box-bg-color;
+  }
+
+  button{
+    width:100px;
+    height:100px;
+  }
+
+}

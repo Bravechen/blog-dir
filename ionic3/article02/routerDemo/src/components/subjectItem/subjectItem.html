@@ -1,0 +1,7 @@
+<ion-list>
+    <ion-list-header class="subject__header" >
+        <i class="jp-icon ion-md-jpicon__store-icon0" ></i>
+        <span>{{subject.title}}</span>
+    </ion-list-header>
+    <app-item *ngFor="let app of subject.appList" [appId]="app.appId" ></app-item>
+</ion-list>
