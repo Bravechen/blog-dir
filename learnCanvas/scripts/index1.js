@@ -12,7 +12,9 @@ function handleLearn1(stage){
   learn1.preset(stage);
   // learn1.drawRect();
   // learn1.drawArcTo();
-  learn1.rotateRect();
+  // learn1.rotateRect();
+  // learn1.drawLineGradient();
+  learn1.drawRaidalGradient();
 }
 
 window.onload = init;

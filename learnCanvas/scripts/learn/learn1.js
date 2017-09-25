@@ -86,10 +86,65 @@ function rotateRect(){
 
 }
 
+function drawLineGradient(){
+
+  let x = 100;
+  let y = 100;
+  let width = 200;
+  let height = 200; 
+
+  let qr = ctx.createLinearGradient(x,y,x+width,y);
+  qr.addColorStop(0,'#de5050');
+  qr.addColorStop(0.5,'#ffffff');
+  qr.addColorStop(1,'#cccccc');
+
+  let qr2 = ctx.createLinearGradient(x,y+height,x+width*2,y+height);
+  qr2.addColorStop(0,'#ddee44');
+  qr2.addColorStop(0.5,'#cc4455');
+  qr2.addColorStop(1,'#eeccaa');
+
+  ctx.save();
+  ctx.fillStyle = qr;
+  ctx.fillRect(x,y,width,height);
+  
+  ctx.restore();
+
+  ctx.save();
+  ctx.fillStyle = qr2;
+  ctx.fillRect(x,y+height,width*2,height*0.5);
+  ctx.restore();
+
+  ctx.save();
+  ctx.strokeStyle = qr2;
+  ctx.lineWidth = 4;
+  ctx.arc(400,100,50,0,2*Math.PI,false);
+  ctx.stroke();
+  ctx.restore();
+}
+
+function drawRaidalGradient(){
+  
+  let qr = ctx.createRadialGradient(100,100,50,200,200,200);
+
+  qr.addColorStop(0,'#de5050');
+  qr.addColorStop(0.5,'#ffffff');
+  qr.addColorStop(1,'#cccccc');
+
+  ctx.save();
+  ctx.fillStyle = qr;
+  ctx.fillRect(0,0,500,500);
+  ctx.restore();
+}
+
+//====================================================
+
+//==================================================
 
 export default {
   preset,
   drawRect,
   drawArcTo,
   rotateRect,
+  drawLineGradient,
+  drawRaidalGradient,
 };
