@@ -1,20 +1,25 @@
-import learn1 from './learn/learn1.js';
+import learn2 from './learn/learn2.js';
 
 var stage1;
 
 function init(){
-  let stage1 = document.getElementById('stage1');
+  handleLearn2('stageBox');
+  // let stage1 = document.getElementById('stageBox');
   
-  handleLearn1(stage1);
+  // handleLearn1(stage1);
 }
 
 function handleLearn1(stage){
-  learn1.preset(stage);
+  // learn1.preset(stage);
   // learn1.drawRect();
   // learn1.drawArcTo();
   // learn1.rotateRect();
   // learn1.drawLineGradient();
-  learn1.drawRaidalGradient();
+  // learn1.drawRaidalGradient();
+}
+
+function handleLearn2(stageBoxId){
+  learn2.preset(stageBoxId);
 }
 
 window.onload = init;

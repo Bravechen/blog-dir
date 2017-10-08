@@ -1,13 +1,18 @@
+import EventDispatcher from './EventDispatcher.js';
 
-export default class Sprite{
+export default class Display extends EventDispatcher{
     constructor(){
+        super();
         this._x = 0;
         this._y = 0;
         this._width = 0;
         this._height = 0;
+        this._commands = [];
         this._displayIndex = 0;
+        this._nest = 1;
+        this._parent = null;
+        this._stage = null;
     }
-
     set x(value){
         this._x = value;
     }
@@ -38,4 +43,7 @@ export default class Sprite{
 
     _draw(){}
 
+    static _canUse(display){
+        return display && display.uid;
+    }
 }
