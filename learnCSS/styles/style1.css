@@ -1,0 +1,49 @@
+body{
+    width:1024px;
+    height:768px;
+
+    margin:0 auto;
+    /* overflow: hidden; */
+    background:#f2f2f2;
+}
+
+div{
+    overflow: hidden;
+}
+
+.wrapper-parent{
+    width:200px;
+    height:300px;
+
+    background: #cccccc;
+    margin:50px;
+}
+
+.wrapper{
+    width:150px;
+    height:150px;
+
+    background: #333333;
+    margin:25px;
+
+    padding:10px;
+    border:5px solid #00ffff;
+}
+
+.inner{
+    width:100px;
+    height:100px;
+
+    background: #de5050;
+    /* margin:12px; */
+}
+
+.relative{
+    position:relative;
+}
+
+.absolute{
+    position: absolute;
+    top:15px;
+    left:15px;
+}
