@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {{#if showTests}}
+    <link href="/vendor/mocha.css" rel="stylesheet" />
+    {{/if}}
+    <title>{{title}}</title>
+</head>
+<body>
+    {{{body}}}
+
+    <script src="/vendor/jquery.min.js"></script>
+    {{#if showTests}}
+        <div id="mocha"></div>
+        <script src="/vendor/mocha.js"></script>
+        <script src="/vendor/chai.js"></script>
+        <script>
+            (function(){
+                mocha.ui('tdd');
+                window.assert = chai.assert;
+            })();
+        </script>
+        <script src="/qa/tests-global.js" ></script>
+        {{#if pageTestScript}}
+        <script src="{{pageTestScript}}" ></script>
+        {{/if}}
+        <script>
+            mocha.run();
+        </script>
+    {{/if}}
+</body>
+</html>

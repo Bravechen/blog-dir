@@ -1,0 +1,27 @@
+{
+  "name": "learn-express",
+  "version": "1.0.0",
+  "description": "express project",
+  "main": "learnExpress.js",
+  "scripts": {
+    "test": "test",
+    "dev": "node learnExpress.js",
+    "start": "supervisor learnExpress.js"
+  },
+  "keywords": [
+    "express",
+    "test"
+  ],
+  "author": "BraveChen",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "handlebars": "^4.0.11",
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1"
+  }
+}
