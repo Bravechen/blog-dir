@@ -1,0 +1,124 @@
+
+//======================================================
+.no-mask{
+    position: fixed;
+    top:50%;
+    left:50%;
+    z-index:9999;
+
+    transform:translate(-50%,-50%);
+}
+
+.have-mask{
+    @extend %layer;
+}
+
+.transparent-have-mask{
+    @extend %transparent-mask-layer;
+}
+
+%anmiate-layer{
+    transition:0.3s opacity ease-in-out;
+    opacity:0;
+
+    &[class~="layer--show"]{
+        opacity:1;
+    }
+}
+
+%layer{
+    width:100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items:center;
+    justify-content:center;
+
+    position: fixed;
+    top:0;
+    left:0;
+    z-index:9999;    
+
+    &::after{
+        content:'';
+        display:block;
+        width:100%;
+        height:100%;
+
+        background:#000000;
+        opacity:0.7;
+        position: absolute;
+        top:0;
+        left: 0;
+        z-index:-1;
+    }
+}
+
+%transparent-mask-layer{
+    @extend %layer;
+
+    &::after{
+        opacity:0;
+        
+    }
+}
+//===========================================================
+$ui-fontFamily:'Microsoft YaHei','Avenir', Helvetica, Arial, sans-serif;
+$default-shadow:0px 0px 5px 1px #000000;
+$default-Color:#ffffff;
+$default-fontSize:16px;
+$default-radius:5px;
+//==========================================================================
+$confirm-width:84%;
+$confirm-bg-color:$default-Color;
+$confirm-box-shadow:$default-shadow;
+
+
+$confirm-header-bg-color:$default-Color;
+$confirm-header-fontColor:#283f57;
+$confirm-header-fontSize:18px;
+
+$confirm-cnt-bgColor:$default-Color;
+$confirm-cnt-fontSize:16px;
+$confirm-cnt-fontColor:#333333;
+$confirm-cnt-textAlign:center;
+
+
+$confirm-btn-borderColor:#e19d0b;
+$confirm-btn-box-top-border:1px solid $confirm-btn-borderColor;
+$confirm-btn-boxHeight:48px;
+$confirm-btn-box-bgColor:$default-Color;
+$confirm-btn-fontSize:$default-fontSize;
+$confirm-btn-fontColor:#303030;
+$confirm-btn-lineHeight:3;
+$confirm-btn-bgColor:#fab728;
+$confirm-btn-bgColor--hover:#d39822;
+$confirm-btn-fontColor--hover:$default-Color;
+//==============================================================================
+$msg-width:72%;
+$msg-bgColor:$default-Color;
+$msg-boxShadow:$default-shadow;
+
+$msg-cnt-bgColor:$default-Color;
+$msg-cnt-fontSize:$default-fontSize;
+$msg-cnt-fontColor:#333333;
+$msg-cnt-minHeight:72px;
+$msg-cnt-textAlign:center;
+
+//==============================================================================
+$loading-cnt-width:100px;
+$loading-cnt-height:100px;
+$loading-cnt-boxShadow:0px 0px 11px -2px #333333;
+$loading-cnt-borderRadius:10px;
+$loading-cnt-bgColor:#ffffff;
+$loading-cnt-fontSize:16px;
+$loading-cnt-fontColor:#333333;
+$loading-icon-boxWidth:100%;
+$loading-icon-width:2em;
+$loading-icon-height:2em;
+$loading-text-width:100%;
+$loading-text-height:24px;
+$loading-text-lineHeight:2;
+
+
+
