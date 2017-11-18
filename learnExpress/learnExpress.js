@@ -31,7 +31,7 @@ app.get('/tours/hood-river',function(req,res){
 });
 
 app.get('tours/request-group-rate',function(req,res){
-    res.render('tours/request-group-rate');
+    res.render('tours/request-group-rate',{title:'旅行团规模'});
 });
 
 
