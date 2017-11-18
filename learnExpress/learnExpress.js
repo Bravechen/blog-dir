@@ -30,7 +30,7 @@ app.get('/tours/hood-river',function(req,res){
     res.render('tours/hood-river',{title:'胡德河'});
 });
 
-app.get('tours/request-group-rate',function(req,res){
+app.get('/tours/request-group-rate',function(req,res){
     res.render('tours/request-group-rate',{title:'旅行团规模'});
 });
 
