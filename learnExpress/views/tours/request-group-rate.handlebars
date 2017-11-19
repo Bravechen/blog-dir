@@ -8,6 +8,8 @@
 </form>
 <script>
   $(document).ready(function(){
-    $('input[name="referrer"]').val(document.referrer);
-  });
+      var reg = /(?=([^f\=]+))[\w-]+/g;
+      var list = window.location.hash.match(reg);
+        $('input[name="referrer"]').val(document.referrer || list&&list.length>0?list[0]:'');
+  });  
 </script>

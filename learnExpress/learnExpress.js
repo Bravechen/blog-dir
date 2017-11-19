@@ -30,6 +30,10 @@ app.get('/tours/hood-river',function(req,res){
     res.render('tours/hood-river',{title:'胡德河'});
 });
 
+app.get('/tours/oregon-coast',function(req,res){
+    res.render('tours/oregon-coast',{title:'俄亥俄海滩之旅'});
+});
+
 app.get('/tours/request-group-rate',function(req,res){
     res.render('tours/request-group-rate',{title:'旅行团规模'});
 });
