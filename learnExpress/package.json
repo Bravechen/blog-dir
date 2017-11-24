@@ -4,7 +4,7 @@
   "description": "express project",
   "main": "learnExpress.js",
   "scripts": {
-    "test": "mocha -u tdd -R spec qa/tests-crosspage.js 2>/dev/null",
+    "test": "mocha -u tdd -R spec qa/tests-crosspage.js ",
     "dev": "node learnExpress.js",
     "start": "supervisor learnExpress.js"
   },
