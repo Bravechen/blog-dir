@@ -3,6 +3,7 @@ const handlebars = require('express-handlebars').create({
         defaultLayout:'main',
         extname:'.hbs'
     });
+const bodyParser = require('body-parser')();
 
 const app = express();
 
@@ -10,6 +11,8 @@ app.engine('.hbs',handlebars.engine);
 app.set('view engine','.hbs');
 
 app.set('port',process.env.PORT || 3000);
+
+app.use(bodyParser);
 
 app.use(function(req,res,next){
     res.locals.showTests = app.get('env') !== 'production' && req.query.test === '1';
@@ -41,6 +44,24 @@ app.get('/tours/request-group-rate',function(req,res){
     res.render('tours/request-group-rate',{title:'旅行团规模'});
 });
 
+app.get('/newsletter',function(req,res){
+    res.render('newsletter',{
+        csrf:'CSRF token goes here'
+    });
+});
+
+app.post('/process',function(req,res){
+    console.log(`From (from querystring):${req.query.form}`);
+    console.log(`CSRF token (from hidden from field):${req.body._csrf}`);
+    console.log(`Name (from visible from field):${req.body.name}`);
+    console.log(`Email (from visible form field):${req.body.email}`);
+    res.redirect(303,'/thank-you');
+});
+
+app.get('/thank-you',function(req,res){
+    
+    res.render('thank-you');
+});
 
 //404
 app.use(function(req,res){
