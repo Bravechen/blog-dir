@@ -11,7 +11,7 @@ let compose = function(...args){
               result = [result];
           }
       }
-      return result;
+      return result[0];
   }    
 }
 
