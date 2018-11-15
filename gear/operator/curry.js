@@ -5,14 +5,14 @@ let curry = function(fn) {
     }
     
     let len = fn.length;
-    let o = function(params) {
+    let o = function o(params) {
         return function(...args) {
-            let ary2 = params.concat(args);
-            if(ary2.length >= len) {
-                return fn.apply(this, ary2);
+            let ary = params.concat(args);
+            if(ary.length >= len) {
+                return fn.apply(this, ary);
             }
 
-            return o(ary2);
+            return o(ary);
         };
     };
     

@@ -1,3 +1,4 @@
+
 function value() {
   let useChain = this && this.__chain__;
   
@@ -14,9 +15,7 @@ function value() {
     return result;
   }
 
-  let ary = Array.from(arguments);
-  let len = ary.length;
-  return len > 1? ary : ary[0];
+  return this && this._value ? this._value : (void 0); 
 }
 
 export default value;
